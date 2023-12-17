@@ -7,8 +7,9 @@
     tools:context=".MainActivity">
 
 
+
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/password"
         android:layout_width="345dp"
         android:layout_height="45dp"
         android:background="@drawable/roundrect"
@@ -18,12 +19,55 @@
         tools:layout_editor_absoluteY="401dp"
         tools:ignore="MissingConstraints" />
 
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="345dp"
+        android:layout_height="45dp"
+        android:background="@drawable/roundrect"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="320dp"
+        tools:ignore="MissingConstraints" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <TextView
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login to your account"
+        android:textColor="#525252"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="222dp" />
+
+    <TextView
+        android:id="@+id/welcomBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!"
+        android:textColor="#525252"
+        android:textSize="32dp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="169dp" />
+
+
+
+
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:background="@drawable/lockit_icon"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <TextView
             android:layout_width="62dp"
             android:layout_height="62dp"
             android:layout_gravity="center"
@@ -35,6 +79,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.584" />
+
 
         <TextView
             android:layout_width="32dp"
@@ -49,8 +94,57 @@
             app:layout_constraintVertical_bias="0.582" />
 
 
+<!--    Shadow start-->
+<!--    <TextView-->
+<!--        android:layout_width="66dp"-->
+<!--        android:layout_height="66dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:background="@drawable/colored_circle"-->
+<!--        android:text=""-->
+<!--        android:elevation="20dp"-->
+<!--        android:padding="18px"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.085"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.466" />-->
+<!--    Shadow end-->
+    <TextView
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.466" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:background="@drawable/carbon_password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:textColor="#525252"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="583dp" />
 
 
     <!--    <Button-->
