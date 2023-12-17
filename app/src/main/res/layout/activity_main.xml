@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-9dp"
+    tools:layout_editor_absoluteY="0dp">
 
 
     <EditText
@@ -15,9 +16,9 @@
         android:background="@drawable/roundrect"
         android:ems="10"
         android:inputType="textPassword"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="401dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="401dp" />
 
     <EditText
         android:id="@+id/username"
@@ -26,9 +27,9 @@
         android:background="@drawable/roundrect"
         android:ems="10"
         android:inputType="text"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="320dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="320dp" />
 
 
     <TextView
@@ -52,8 +53,6 @@
         tools:layout_editor_absoluteY="169dp" />
 
 
-
-
     <TextView
         android:layout_width="110dp"
         android:layout_height="110dp"
@@ -68,48 +67,48 @@
         app:layout_constraintVertical_bias="0.122" />
 
     <TextView
-            android:layout_width="62dp"
-            android:layout_height="62dp"
-            android:layout_gravity="center"
-            android:background="@drawable/circle"
-            android:text=""
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.086"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.584" />
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.584" />
 
 
-        <TextView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:background="@drawable/carbon_password"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.113"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.582" />
+    <TextView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:background="@drawable/carbon_password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.582" />
 
 
-<!--    Shadow start-->
-<!--    <TextView-->
-<!--        android:layout_width="66dp"-->
-<!--        android:layout_height="66dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:background="@drawable/colored_circle"-->
-<!--        android:text=""-->
-<!--        android:elevation="20dp"-->
-<!--        android:padding="18px"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.085"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.466" />-->
-<!--    Shadow end-->
+    <!--    Shadow start-->
+    <!--    <TextView-->
+    <!--        android:layout_width="66dp"-->
+    <!--        android:layout_height="66dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:background="@drawable/colored_circle"-->
+    <!--        android:text=""-->
+    <!--        android:elevation="20dp"-->
+    <!--        android:padding="18px"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.085"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.466" />-->
+    <!--    Shadow end-->
     <TextView
         android:layout_width="62dp"
         android:layout_height="62dp"
@@ -137,14 +136,33 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/donthaveaccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't have an account?"
         android:textColor="#525252"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="583dp" />
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="584dp" />
+
+    <TextView
+        android:id="@+id/createAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create account"
+        android:textColor="#00E0FF"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="584dp" />
+
+    <Button
+        android:id="@+id/button"
+        bac
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="490dp" />
 
 
     <!--    <Button-->
