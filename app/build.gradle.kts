@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.lockit_mobile_app"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.lockit_mobile_app"
