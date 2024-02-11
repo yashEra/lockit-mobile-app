@@ -10,26 +10,19 @@
 
 
     <EditText
-        android:id="@+id/password"
-        android:layout_width="345dp"
-        android:layout_height="45dp"
-        android:background="@drawable/roundrect"
-        android:ems="10"
-        android:inputType="textPassword"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="401dp" />
-
-    <EditText
         android:id="@+id/username"
-        android:layout_width="345dp"
+        android:layout_width="325dp"
         android:layout_height="45dp"
         android:background="@drawable/roundrect"
         android:ems="10"
         android:inputType="text"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="320dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462"
+        tools:ignore="MissingConstraints" />
 
 
     <TextView
@@ -39,8 +32,12 @@
         android:text="Login to your account"
         android:textColor="#525252"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="222dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.322"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/welcomBack"
@@ -49,11 +46,15 @@
         android:text="Welcome Back!"
         android:textColor="#525252"
         android:textSize="32dp"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="169dp" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:layout_gravity="center"
@@ -66,7 +67,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.122" />
 
+
     <TextView
+        android:id="@+id/textView9"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_gravity="center"
@@ -74,13 +77,28 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584" />
+        app:layout_constraintVertical_bias="0.582" />
 
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:background="@drawable/roundrect"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.578"
+        tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/textView8"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
@@ -110,6 +128,7 @@
     <!--        app:layout_constraintVertical_bias="0.466" />-->
     <!--    Shadow end-->
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_gravity="center"
@@ -123,6 +142,7 @@
         app:layout_constraintVertical_bias="0.466" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
@@ -142,8 +162,13 @@
         android:text="Don't have an account?"
         android:textColor="#525252"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="584dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/createAccount"
@@ -152,17 +177,25 @@
         android:text="Create account"
         android:textColor="#00E0FF"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="584dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.828"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
-        bac
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign in"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="490dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689"
+        tools:ignore="MissingConstraints" />
 
 
     <!--    <Button-->
