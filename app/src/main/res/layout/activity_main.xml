@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="Welcome Back!"
         android:textColor="#525252"
+        android:textStyle="bold"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,8 +41,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         android:layout_gravity="center"
         android:background="@drawable/lockit_icon"
         android:text=""
@@ -50,7 +51,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.100" />
 
 
     <TextView
@@ -76,7 +77,8 @@
         android:layout_height="45dp"
         android:background="@drawable/roundrect"
         android:ems="10"
-        android:text="          username"
+        android:text="username"
+        android:paddingLeft="60dp"
         android:textColor="#525252"
         android:inputType="text"
         android:elevation="10dp"
@@ -111,8 +113,9 @@
         android:background="@drawable/roundrect"
         android:ems="10"
         android:inputType="text"
-        android:text="          password"
+        android:text="password"
         android:textColor="#525252"
+        android:paddingLeft="60dp"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

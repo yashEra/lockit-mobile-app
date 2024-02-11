@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:layout_editor_absoluteX="-9dp"
+    android:name=".SignUpActivity"
     tools:layout_editor_absoluteY="-13dp">
 
 
@@ -20,7 +21,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.019" />
 
     <TextView
         android:id="@+id/welcom"
@@ -29,13 +30,14 @@
         android:shadowRadius="5"
         android:text="Welcome!"
         android:textColor="#525252"
+        android:textStyle="bold"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193"
+        app:layout_constraintVertical_bias="0.153"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -50,7 +52,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.248"
+        app:layout_constraintVertical_bias="0.208"
         tools:ignore="MissingConstraints" />
 
 <!--username-->
@@ -62,14 +64,15 @@
         android:elevation="10dp"
         android:ems="10"
         android:inputType="text"
-        android:text="          username"
+        android:text="username"
+        android:paddingLeft="60dp"
         android:textColor="#525252"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.639"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.351"
+        app:layout_constraintVertical_bias="0.311"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -86,7 +89,7 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintVertical_bias="0.309" />
 
     <TextView
         android:id="@+id/textView3"
@@ -100,7 +103,7 @@
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.350" />
+        app:layout_constraintVertical_bias="0.312" />
 
 <!--    username end-->
 
@@ -114,14 +117,15 @@
         android:elevation="10dp"
         android:ems="10"
         android:inputType="text"
-        android:text="          email"
+        android:text="email"
+        android:paddingLeft="60dp"
         android:textColor="#525252"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.639"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467"
+        app:layout_constraintVertical_bias="0.427"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -138,21 +142,21 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.465" />
+        app:layout_constraintVertical_bias="0.425" />
 
     <TextView
         android:id="@+id/emaili"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
-        android:background="@drawable/user"
+        android:background="@drawable/email"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
+        app:layout_constraintVertical_bias="0.426" />
 
 <!--    email end-->
 
@@ -166,14 +170,15 @@
         android:elevation="10dp"
         android:ems="10"
         android:inputType="text"
-        android:text="          phone number"
+        android:text="phone number"
+        android:paddingLeft="60dp"
         android:textColor="#525252"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.639"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.583"
+        app:layout_constraintVertical_bias="0.543"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -184,27 +189,26 @@
         android:background="@drawable/circle"
         android:elevation="10dp"
         android:text=""
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.541" />
 
     <TextView
         android:id="@+id/phonenumberi"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
-        android:background="@drawable/user"
+        android:background="@drawable/call"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
+        app:layout_constraintVertical_bias="0.542" />
 
     <!--    Password-->
 
@@ -216,14 +220,15 @@
         android:elevation="10dp"
         android:ems="10"
         android:inputType="text"
-        android:text="          password"
+        android:text="password"
+        android:paddingLeft="60dp"
         android:textColor="#525252"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.639"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.700"
+        app:layout_constraintVertical_bias="0.659"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -239,7 +244,7 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702" />
+        app:layout_constraintVertical_bias="0.662" />
 
     <TextView
         android:id="@+id/textView8"
@@ -253,7 +258,7 @@
         app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.699" />
+        app:layout_constraintVertical_bias="0.659" />
 
     <!--    Password End-->
 
@@ -266,14 +271,15 @@
         android:elevation="10dp"
         android:ems="10"
         android:inputType="text"
-        android:text="          retype password"
+        android:text="retype password"
+        android:paddingLeft="60dp"
         android:textColor="#525252"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.639"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816"
+        app:layout_constraintVertical_bias="0.775"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -289,7 +295,7 @@
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818" />
+        app:layout_constraintVertical_bias="0.778" />
 
     <TextView
         android:id="@+id/retypepassi"
@@ -303,7 +309,7 @@
         app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.815" />
+        app:layout_constraintVertical_bias="0.773" />
 
     <!--    Retype Password End-->
 
@@ -344,7 +350,7 @@
         android:id="@+id/signin"
         android:layout_width="180dp"
         android:layout_height="40dp"
-        android:text="Sign in"
+        android:text="Sign up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
