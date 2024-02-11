@@ -68,6 +68,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.540" />
 
+
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:background="@drawable/roundrect"
+        android:ems="10"
+        android:text="          username"
+        android:textColor="#525252"
+        android:inputType="text"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="62dp"
@@ -85,28 +105,14 @@
         app:layout_constraintVertical_bias="0.420" />
 
     <EditText
-        android:id="@+id/username"
-        android:layout_width="325dp"
-        android:layout_height="45dp"
-        android:background="@drawable/roundrect"
-        android:ems="10"
-        android:inputType="text"
-        android:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.639"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.422"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
         android:id="@+id/password"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:background="@drawable/roundrect"
         android:ems="10"
-        android:inputType="textPassword"
+        android:inputType="text"
+        android:text="          password"
+        android:textColor="#525252"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,6 +135,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf= "parent"
         app:layout_constraintVertical_bias="0.537" />
+
 
 
     <TextView
