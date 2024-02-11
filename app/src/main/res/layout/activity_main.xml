@@ -35,6 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25"
+        android:shadowRadius="5"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -59,12 +60,13 @@
         android:layout_gravity="center"
         android:background="@drawable/circle"
         android:text=""
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593" />
+        app:layout_constraintVertical_bias="0.540" />
 
     <TextView
         android:id="@+id/textView4"
@@ -73,12 +75,14 @@
         android:layout_gravity="center"
         android:background="@drawable/circle"
         android:text=""
+        android:elevation="10dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473" />
+        app:layout_constraintVertical_bias="0.420" />
 
     <EditText
         android:id="@+id/username"
@@ -87,12 +91,13 @@
         android:background="@drawable/roundrect"
         android:ems="10"
         android:inputType="text"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.639"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475"
+        app:layout_constraintVertical_bias="0.422"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -102,12 +107,13 @@
         android:background="@drawable/roundrect"
         android:ems="10"
         android:inputType="textPassword"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.639"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591"
+        app:layout_constraintVertical_bias="0.538"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -115,31 +121,14 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
+        android:elevation="10dp"
         android:background="@drawable/carbon_password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf= "parent"
-        app:layout_constraintVertical_bias="0.590" />
-
-
-    <!--    Shadow start-->
-    <!--    <TextView-->
-    <!--        android:layout_width="66dp"-->
-    <!--        android:layout_height="66dp"-->
-    <!--        android:layout_gravity="center"-->
-    <!--        android:background="@drawable/colored_circle"-->
-    <!--        android:text=""-->
-    <!--        android:elevation="20dp"-->
-    <!--        android:padding="18px"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.085"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        app:layout_constraintVertical_bias="0.466" />-->
-    <!--    Shadow end-->
+        app:layout_constraintVertical_bias="0.537" />
 
 
     <TextView
@@ -148,12 +137,13 @@
         android:layout_height="32dp"
         android:layout_gravity="center"
         android:background="@drawable/user"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473" />
+        app:layout_constraintVertical_bias="0.421" />
 
     <TextView
         android:id="@+id/donthaveaccount"
@@ -167,7 +157,7 @@
         app:layout_constraintHorizontal_bias="0.221"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823"
+        app:layout_constraintVertical_bias="0.800"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -182,19 +172,35 @@
         app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823"
+        app:layout_constraintVertical_bias="0.800"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/forgetpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget Password"
+        android:textColor="#00E0FF"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.616"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/signin"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
         android:text="Sign in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689"
+        app:layout_constraintVertical_bias="0.690"
         tools:ignore="MissingConstraints" />
 
 
