@@ -77,43 +77,57 @@ class SignUp : AppCompatActivity()  {
 
             if (!isNetworkAvailable()) {
                 Toast.makeText(this@SignUp, "No internet connection", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (username.isEmpty()) {
                 Toast.makeText(this@SignUp, "Username can't be empty", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (email.isEmpty() || !isValidEmail(email)) {
                 Toast.makeText(this@SignUp, "Enter a valid email address", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (phoneNumber.isEmpty()) {
                 Toast.makeText(this@SignUp, "Phone Number can't be empty", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (password.isEmpty()) {
                 Toast.makeText(this@SignUp, "Password can't be empty", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (retypePassword.isEmpty()) {
                 Toast.makeText(this@SignUp, "Retype password can't be empty", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (password != retypePassword) {
                 Toast.makeText(this@SignUp, "Passwords are not matching", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
@@ -148,42 +162,10 @@ class SignUp : AppCompatActivity()  {
         return isConnected
     }
 
-
-    private fun isValidEmail(email: String): Boolean {
-        val emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
-        return email.matches(emailRegex.toRegex())
+        val b2: Button = findViewById(R.id.login)
+        b2.setOnClickListener {
+            val i = Intent(this@SignUp, MainActivity::class.java)
+            startActivity(i)
+        }
     }
-
-    private fun signup(username: String, email: String, phoneNumber: String, password: String) {
-        val requestBody = FormBody.Builder()
-            .add("username", username)
-            .add("email", email)
-            .add("phoneNumber", phoneNumber)
-            .add("password", password)
-            .build()
-
-        val request = Request.Builder().url(getURL).post(requestBody).build()
-
-        client.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                e.printStackTrace()
-                runOnUiThread {
-                    loading.visibility = View.GONE
-                    Toast.makeText(this@SignUp, "Something went wrong", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onResponse(call: Call, response: Response) {
-                runOnUiThread {
-                    loading.visibility = View.GONE
-                    try {
-                        Toast.makeText(this@SignUp, response.body?.string(), Toast.LENGTH_SHORT).show()
-                    } catch (e: IOException) {
-                        throw RuntimeException(e)
-                    }
-                }
-            }
-        })
-    }
-
 }
