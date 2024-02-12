@@ -66,19 +66,25 @@ class Login : AppCompatActivity() {
 
             if (!isNetworkAvailable()) {
                 Toast.makeText(this@Login, "No internet connection", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (username.isEmpty()) {
                 Toast.makeText(this@Login, "Username can't be empty", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (password.isEmpty()) {
                 Toast.makeText(this@Login, "Password can't be empty", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 

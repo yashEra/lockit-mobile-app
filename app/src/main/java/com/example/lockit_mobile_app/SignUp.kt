@@ -77,43 +77,57 @@ class SignUp : AppCompatActivity()  {
 
             if (!isNetworkAvailable()) {
                 Toast.makeText(this@SignUp, "No internet connection", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (username.isEmpty()) {
                 Toast.makeText(this@SignUp, "Username can't be empty", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (email.isEmpty() || !isValidEmail(email)) {
                 Toast.makeText(this@SignUp, "Enter a valid email address", Toast.LENGTH_SHORT).show()
+                
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (phoneNumber.isEmpty()) {
                 Toast.makeText(this@SignUp, "Phone Number can't be empty", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (password.isEmpty()) {
                 Toast.makeText(this@SignUp, "Password can't be empty", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (retypePassword.isEmpty()) {
                 Toast.makeText(this@SignUp, "Retype password can't be empty", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
             if (password != retypePassword) {
                 Toast.makeText(this@SignUp, "Passwords are not matching", Toast.LENGTH_SHORT).show()
+
                 loading.visibility = View.GONE
+
                 return@setOnClickListener
             }
 
