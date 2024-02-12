@@ -61,7 +61,7 @@
         android:layout_gravity="center"
         android:background="@drawable/circle"
         android:text=""
-        android:elevation="10dp"
+        android:elevation="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.085"
@@ -77,8 +77,9 @@
         android:layout_height="45dp"
         android:background="@drawable/roundrect"
         android:ems="10"
-        android:text="username"
+        android:hint="username"
         android:paddingLeft="60dp"
+        android:textSize="16dp"
         android:textColor="#525252"
         android:inputType="text"
         android:elevation="10dp"
@@ -97,7 +98,7 @@
         android:layout_gravity="center"
         android:background="@drawable/circle"
         android:text=""
-        android:elevation="10dp"
+        android:elevation="11dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,8 +113,9 @@
         android:layout_height="45dp"
         android:background="@drawable/roundrect"
         android:ems="10"
-        android:inputType="text"
-        android:text="password"
+        android:inputType="textPassword"
+        android:hint="password"
+        android:textSize="16dp"
         android:textColor="#525252"
         android:paddingLeft="60dp"
         android:elevation="10dp"
@@ -130,7 +132,7 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
-        android:elevation="10dp"
+        android:elevation="11dp"
         android:background="@drawable/carbon_password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -147,7 +149,7 @@
         android:layout_height="32dp"
         android:layout_gravity="center"
         android:background="@drawable/user"
-        android:elevation="10dp"
+        android:elevation="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
@@ -170,11 +172,13 @@
         app:layout_constraintVertical_bias="0.800"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <Button
         android:id="@+id/createAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create account"
+        android:background="@android:color/transparent"
+        android:text="Create Account"
+        android:textAllCaps="false"
         android:textColor="#00A5AF"
         android:textStyle="bold"
         android:textSize="16dp"
@@ -183,7 +187,7 @@
         app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.800"
+        app:layout_constraintVertical_bias="0.812"
         tools:ignore="MissingConstraints" />
 
     <TextView
