@@ -1,13 +1,11 @@
 package com.example.lockit_mobile_app
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 
-class Dashboard : AppCompatActivity() {
+class DashBoard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dashboard)
-
     }
-
 }
