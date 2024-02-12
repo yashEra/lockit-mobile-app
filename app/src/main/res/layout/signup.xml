@@ -355,7 +355,7 @@
 
 
     <Button
-        android:id="@+id/createacc"
+        android:id="@+id/signup"
         android:layout_width="180dp"
         android:layout_height="40dp"
         android:text="Sign up"
@@ -368,6 +368,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.898"
         tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <!--    <Button-->
