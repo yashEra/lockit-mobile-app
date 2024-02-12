@@ -162,10 +162,41 @@ class SignUp : AppCompatActivity()  {
         return isConnected
     }
 
-        val b2: Button = findViewById(R.id.login)
-        b2.setOnClickListener {
-            val i = Intent(this@SignUp, MainActivity::class.java)
-            startActivity(i)
-        }
+    private fun isValidEmail(email: String): Boolean {
+        val emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
+        return email.matches(emailRegex.toRegex())
     }
+
+    private fun signup(username: String, email: String, phoneNumber: String, password: String) {
+        val requestBody = FormBody.Builder()
+            .add("username", username)
+            .add("email", email)
+            .add("phoneNumber", phoneNumber)
+            .add("password", password)
+            .build()
+
+        val request = Request.Builder().url(getURL).post(requestBody).build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+                runOnUiThread {
+                    loading.visibility = View.GONE
+                    Toast.makeText(this@SignUp, "Something went wrong", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                runOnUiThread {
+                    loading.visibility = View.GONE
+                    try {
+                        Toast.makeText(this@SignUp, response.body?.string(), Toast.LENGTH_SHORT).show()
+                    } catch (e: IOException) {
+                        throw RuntimeException(e)
+                    }
+                }
+            }
+        })
+    }
+
 }
