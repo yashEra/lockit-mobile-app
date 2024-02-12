@@ -88,7 +88,7 @@ class Login : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            signup(username, password)
+            signIn(username, password)
         }
 
     }
@@ -121,7 +121,7 @@ class Login : AppCompatActivity() {
         return isConnected
     }
 
-    private fun signup(username: String, password: String) {
+    private fun signIn(username: String, password: String) {
         val requestBody = FormBody.Builder()
             .add("username", username)
             .add("password", password)

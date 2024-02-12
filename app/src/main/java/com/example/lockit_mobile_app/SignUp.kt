@@ -93,7 +93,7 @@ class SignUp : AppCompatActivity()  {
 
             if (email.isEmpty() || !isValidEmail(email)) {
                 Toast.makeText(this@SignUp, "Enter a valid email address", Toast.LENGTH_SHORT).show()
-                
+
                 loading.visibility = View.GONE
 
                 return@setOnClickListener
@@ -161,7 +161,6 @@ class SignUp : AppCompatActivity()  {
 
         return isConnected
     }
-
 
     private fun isValidEmail(email: String): Boolean {
         val emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
