@@ -13,6 +13,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.biometric.BiometricManager
+import androidx.biometric.BiometricPrompt
+import androidx.biometric.BiometricPrompt.PromptInfo
+import androidx.core.content.ContextCompat
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.FormBody
@@ -22,11 +26,16 @@ import okhttp3.Response
 import okio.IOException
 import org.json.JSONException
 import org.json.JSONObject
+import java.util.concurrent.Executor
 
 
 class Login : AppCompatActivity() {
 
     private lateinit var client: OkHttpClient
+
+    private lateinit var biometricPrompt: BiometricPrompt
+
+    private lateinit var promptInfo: BiometricPrompt.PromptInfo
 
     private lateinit var createAccount: Button
 
@@ -112,11 +121,56 @@ class Login : AppCompatActivity() {
         return !username.isNullOrEmpty()
     }
 
+
+
     private fun startDashboardActivity() {
-        val intent = Intent(this, DashBoard::class.java)
-        startActivity(intent)
-        finish() // Finish the LoginActivity so the user cannot navigate back to it using the back button
+        val biometricManager = BiometricManager.from(this)
+        when (biometricManager.canAuthenticate()) {
+            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> {
+                Toast.makeText(this@Login, "Device doesn't have fingerprint hardware", Toast.LENGTH_SHORT).show()
+            }
+            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE -> {
+                Toast.makeText(this@Login, "Fingerprint hardware is unavailable", Toast.LENGTH_SHORT).show()
+            }
+            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> {
+                Toast.makeText(this@Login, "No fingerprint enrolled on the device", Toast.LENGTH_SHORT).show()
+            }
+            else -> {
+                Toast.makeText(this@Login, "Something went wrong with fingerprint authentication", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        val executor = ContextCompat.getMainExecutor(this)
+
+        biometricPrompt = BiometricPrompt(this@Login, executor, object : BiometricPrompt.AuthenticationCallback() {
+            override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
+                super.onAuthenticationError(errorCode, errString)
+                Toast.makeText(this@Login, "Authentication error: $errString", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+                super.onAuthenticationSucceeded(result)
+                Toast.makeText(this@Login, "Authentication succeeded!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@Login, DashBoard::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+            override fun onAuthenticationFailed() {
+                super.onAuthenticationFailed()
+                Toast.makeText(this@Login, "Authentication failed", Toast.LENGTH_SHORT).show()
+            }
+        })
+
+        promptInfo = BiometricPrompt.PromptInfo.Builder()
+            .setTitle("Lockit")
+            .setDescription("Authenticate is it you")
+            .setDeviceCredentialAllowed(true)
+            .build()
+
+        biometricPrompt.authenticate(promptInfo)
     }
+
 
     private fun isNetworkAvailable(): Boolean {
         val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
