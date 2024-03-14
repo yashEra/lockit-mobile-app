@@ -7,6 +7,7 @@ import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkRequest
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -21,6 +22,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 import okio.IOException
+import org.json.JSONObject
 
 class SignUp : AppCompatActivity()  {
 
@@ -38,11 +40,11 @@ class SignUp : AppCompatActivity()  {
 
     private lateinit var login: TextView
 
-//    private val postURL: String = "http://10.0.2.2:5001/lockit-332b1/us-central1/app/register"
-    private val getURL: String = "https://reqres.in/api/users"
+    private val postURL: String = "http://10.0.2.2:5001/lockit-332b1/us-central1/app/register"
+//    private val getURL: String = "https://reqres.in/api/users"
 
 
-    @SuppressLint("WrongViewCast", "MissingInflatedId")
+     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signup)
@@ -91,7 +93,7 @@ class SignUp : AppCompatActivity()  {
                 return@setOnClickListener
             }
 
-            if (email.isEmpty() || !isValidEmail(email)) {
+            if (email.isEmpty() || !Utils.isValidEmail(email)) {
                 Toast.makeText(this@SignUp, "Enter a valid email address", Toast.LENGTH_SHORT).show()
 
                 loading.visibility = View.GONE
@@ -162,11 +164,6 @@ class SignUp : AppCompatActivity()  {
         return isConnected
     }
 
-    private fun isValidEmail(email: String): Boolean {
-        val emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$"
-        return email.matches(emailRegex.toRegex())
-    }
-
     private fun signup(username: String, email: String, phoneNumber: String, password: String) {
         val requestBody = FormBody.Builder()
             .add("username", username)
@@ -175,7 +172,7 @@ class SignUp : AppCompatActivity()  {
             .add("password", password)
             .build()
 
-        val request = Request.Builder().url(getURL).post(requestBody).build()
+        val request = Request.Builder().url(postURL).post(requestBody).build()
 
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
@@ -190,7 +187,16 @@ class SignUp : AppCompatActivity()  {
                 runOnUiThread {
                     loading.visibility = View.GONE
                     try {
-                        Toast.makeText(this@SignUp, response.body?.string(), Toast.LENGTH_SHORT).show()
+                        val jsonResponse = response.body?.string()
+                        Log.d("Response", jsonResponse ?: "Empty response")
+
+                        // Convert JSON response string to JSONObject
+                        val jsonObject = JSONObject(jsonResponse)
+
+                        Toast.makeText(this@SignUp,jsonObject.getString("message"), Toast.LENGTH_SHORT).show()
+                        val intent = Intent(applicationContext,Login::class.java)
+                        startActivity(intent)
+                        finish()
                     } catch (e: IOException) {
                         throw RuntimeException(e)
                     }
