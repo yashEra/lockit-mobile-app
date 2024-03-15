@@ -221,6 +221,7 @@ class Login : AppCompatActivity() {
                 runOnUiThread {
                     loading.visibility = View.GONE
                     try {
+
                         val jsonResponse = response.body?.string()
                         Log.d("Response", jsonResponse ?: "Empty response")
 

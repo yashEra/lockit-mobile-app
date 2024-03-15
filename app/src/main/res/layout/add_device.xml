@@ -100,7 +100,7 @@
         app:layout_constraintVertical_bias="0.514" />
 
     <Button
-        android:id="@+id/signin"
+        android:id="@+id/addDevice"
         android:layout_width="180dp"
         android:layout_height="40dp"
         android:background="@drawable/btn_background"
@@ -112,6 +112,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.748"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_background"
+        android:text="back"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.839"
         tools:ignore="MissingConstraints" />
 
     <ProgressBar
