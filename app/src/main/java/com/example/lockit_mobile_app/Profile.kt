@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 class Profile : AppCompatActivity() {
     private lateinit var welcomUsernameTextView: TextView
@@ -60,11 +61,21 @@ class Profile : AppCompatActivity() {
             finish()
         }
 
-        singoutButton.setOnClickListener{
-            val intent = Intent(applicationContext,Login::class.java)
+        singoutButton.setOnClickListener {
+            // Clear SharedPreferences
+            val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+            val editor = sharedPreferences.edit()
+            editor.clear()
+            editor.apply()
+
+            Toast.makeText(this@Profile, "Logout successfully", Toast.LENGTH_SHORT).show()
+
+            // Navigate to the login screen
+            val intent = Intent(applicationContext, Login::class.java)
             startActivity(intent)
             finish()
         }
+
 
     }
 }
