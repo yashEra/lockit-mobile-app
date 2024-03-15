@@ -133,21 +133,41 @@
 
     <!--Manege Device Account-->
 
-    <EditText
+<!--    <EditText-->
+<!--        android:id="@+id/manageDevice"-->
+<!--        android:layout_width="165dp"-->
+<!--        android:layout_height="147dp"-->
+<!--        android:background="@drawable/rounderdsq"-->
+<!--        android:elevation="10dp"-->
+<!--        android:ems="10"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:inputType="none"-->
+<!--        android:maxLines="2"-->
+<!--        android:hint="Manege Devices"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#525252"-->
+<!--        android:textStyle="bold"-->
+<!--        android:enabled="false"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.89"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.319"-->
+<!--        tools:ignore="MissingConstraints,RtlCompat" />-->
+
+    <TextView
         android:id="@+id/manageDevice"
         android:layout_width="165dp"
         android:layout_height="147dp"
         android:background="@drawable/rounderdsq"
         android:elevation="10dp"
-        android:ems="10"
         android:gravity="center_vertical"
-        android:inputType="none"
         android:maxLines="2"
-        android:hint="Manege Devices"
+        android:hint="Manage Devices"
         android:textAlignment="center"
         android:textColor="#525252"
         android:textStyle="bold"
-        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.89"
@@ -156,8 +176,9 @@
         app:layout_constraintVertical_bias="0.319"
         tools:ignore="MissingConstraints,RtlCompat" />
 
+
     <TextView
-        android:id="@+id/manageDevicec"
+        android:id="@+id/manageDeviceIconBG"
         android:layout_width="62dp"
         android:layout_height="62dp"
         android:layout_gravity="center"
@@ -172,7 +193,7 @@
         app:layout_constraintVertical_bias="0.235" />
 
     <TextView
-        android:id="@+id/manageDevicei"
+        android:id="@+id/manageDeviceIcon"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"

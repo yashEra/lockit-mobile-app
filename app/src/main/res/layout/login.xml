@@ -68,12 +68,12 @@
 
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/email"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:background="@drawable/roundrect"
         android:ems="10"
-        android:hint="username"
+        android:hint="email ID"
         android:paddingLeft="60dp"
         android:textSize="16dp"
         android:textColor="#525252"
