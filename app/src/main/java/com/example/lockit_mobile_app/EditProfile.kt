@@ -20,9 +20,11 @@ class EditProfile : AppCompatActivity() {
     private val client = OkHttpClient()
 
     private lateinit var welcomUsernameTextView: TextView
+
     private lateinit var usernameEditText: EditText
     private lateinit var emailEditText: EditText
     private lateinit var phoneEditText: EditText
+
     private lateinit var cancelButton: Button
     private lateinit var saveChangesButton: Button
 
