@@ -35,7 +35,7 @@ class DashBoard : AppCompatActivity() {
         usernameTextView.text = "hi, $username"
 
         manageDevicePage.setOnClickListener{
-            val intent = Intent(applicationContext,AddDevice::class.java)
+            val intent = Intent(applicationContext,ManageDeive::class.java)
             startActivity(intent)
             finish()
         }
