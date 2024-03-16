@@ -69,15 +69,16 @@ class Chat : AppCompatActivity() {
         messageList.add(Message("Typing... ", Message.SENT_BY_BOT))
 
         val jsonBody = JSONObject().apply {
-            put("model", "text-davinci-003")
+            put("model", "gpt-3.5-turbo-instruct")
             put("prompt", question)
-            put("max_tokens", 4000)
+            put("max_tokens", 7)
             put("temperature", 0)
         }
         val body = RequestBody.create(JSON, jsonBody.toString())
         val request = Request.Builder()
             .url("https://api.openai.com/v1/completions")
-            .header("Authorization", "Bearer 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")
+            .header("Content-Type", "application/json")
+            .header("Authorization", "Bearer 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")
             .post(body)
             .build()
 
