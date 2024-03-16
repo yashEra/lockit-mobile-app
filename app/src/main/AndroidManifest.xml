@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
         android:allowBackup="true"
@@ -18,14 +17,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".PasswordEdite"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".AddDevice"
             android:exported="false" />
         <activity
             android:name=".Login"
-
-            android:screenOrientation="portrait"
-            android:exported="true" >
-
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,10 +40,8 @@
         </activity>
         <activity
             android:name=".DashBoard"
-            android:screenOrientation="portrait"
             android:exported="false" />
-        <activity android:name=".SignUp"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".SignUp" />
     </application>
 
 </manifest>

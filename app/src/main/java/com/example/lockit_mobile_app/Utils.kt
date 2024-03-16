@@ -6,3 +6,4 @@ object Utils {
         return email.matches(emailRegex.toRegex())
     }
 }
+
