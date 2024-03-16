@@ -64,6 +64,7 @@ class Chat : AppCompatActivity() {
         addToChat(response, Message.SENT_BY_BOT)
     }
 
+    //For send to the request
     private fun callAPI(question: String) {
         // OkHttp
         messageList.add(Message("Typing... ", Message.SENT_BY_BOT))
@@ -87,6 +88,7 @@ class Chat : AppCompatActivity() {
                 addResponse("Failed to load response due to ${e.message}")
             }
 
+            //For Get to the request
             override fun onResponse(call: Call, response: Response) {
                 response.use {
                     if (it.isSuccessful) {
