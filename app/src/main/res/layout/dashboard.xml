@@ -268,7 +268,6 @@
         android:gravity="center_vertical"
         android:maxLines="2"
         android:hint="Help"
-        android:enabled="false"
         android:textAlignment="center"
         android:textColor="#525252"
         android:textStyle="bold"
@@ -338,13 +337,77 @@
         android:background="@drawable/rounderdsq"
         android:elevation="11dp"
         android:text="Lock"
+        android:visibility="gone"
         android:textColor="#00A5AF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintHorizontal_bias="0.281"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922"
+        app:layout_constraintVertical_bias="0.938"
         tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/unlock"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounderdsq"
+        android:elevation="11dp"
+        android:text="Unock"
+        android:visibility="gone"
+        android:textColor="#00A5AF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/lockiconbg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle"
+        android:elevation="10dp"
+        android:text=""
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <TextView
+        android:id="@+id/locked_lock"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:background="@drawable/locked_lock"
+        android:elevation="11dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939" />
+    <TextView
+        android:id="@+id/unlocked_lock"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:background="@drawable/unlocked_lock"
+        android:elevation="11dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
