@@ -98,6 +98,12 @@ class DashBoard : AppCompatActivity() {
             finish()
         }
 
+        helpPage.setOnClickListener{
+            val intent = Intent(applicationContext,Chat::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         lockButton.setOnClickListener {
             val deviceid = deviceID.toString()
             if (!isNetworkAvailable()) {
