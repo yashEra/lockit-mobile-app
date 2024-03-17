@@ -1,54 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".ManageDeive"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Notifications"
     tools:ignore="MissingDefaultResource">
-<TextView
-    android:id="@+id/subtitle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Add or remove your devicess"
-    android:textColor="#525252"
-    android:textSize="16dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.322"
-    tools:ignore="MissingConstraints" />
 
-<TextView
-    android:id="@+id/welcomBack"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Device"
-    android:textColor="#525252"
-    android:textStyle="bold"
-    android:textSize="32dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.25"
-    android:shadowRadius="5"
-    tools:ignore="MissingConstraints" />
 
-<TextView
-    android:id="@+id/textView2"
-    android:layout_width="140dp"
-    android:layout_height="140dp"
-    android:layout_gravity="center"
-    android:background="@drawable/lockit_icon"
-    android:text=""
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.498"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.100" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Alert and Notifications"
+        android:textColor="#525252"
+        android:textStyle="bold"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        android:shadowRadius="5"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:background="@drawable/lockit_icon"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
 
     <TextView
         android:id="@+id/locked_lock"
@@ -94,12 +83,12 @@ tools:context=".ManageDeive"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/deiveIDtext"
+        android:id="@+id/alert"
         android:layout_width="325dp"
         android:layout_height="45dp"
         android:background="@drawable/roundrect"
         android:elevation="10dp"
-        android:hint="Device ID"
+        android:hint=" successfully logged in"
         android:paddingLeft="60dp"
         android:paddingTop="14dp"
         android:textColor="#525252"
@@ -116,7 +105,7 @@ tools:context=".ManageDeive"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
-        android:background="@drawable/lock"
+        android:background="@drawable/alert"
         android:elevation="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -141,62 +130,32 @@ tools:context=".ManageDeive"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.405" />
 
-    <Button
-    android:id="@+id/addDevice"
-    android:layout_width="180dp"
-    android:layout_height="40dp"
-    android:background="@drawable/btn_background"
-    android:text="Add Device"
-    android:textColor="@color/white"
-    android:visibility="gone"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.497"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.748"
-    tools:ignore="MissingConstraints" />
+
 
     <Button
-        android:id="@+id/removeDevice"
+        android:id="@+id/back"
         android:layout_width="180dp"
         android:layout_height="40dp"
         android:background="@drawable/btn_background"
-        android:text="Remove Device"
-        android:visibility="gone"
+        android:text="back"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.748"
+        app:layout_constraintVertical_bias="0.9"
         tools:ignore="MissingConstraints" />
 
-<Button
-    android:id="@+id/back"
-    android:layout_width="180dp"
-    android:layout_height="40dp"
-    android:background="@drawable/btn_background"
-    android:text="back"
-    android:textColor="@color/white"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.497"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.839"
-    tools:ignore="MissingConstraints" />
 
-
-<ProgressBar
-    android:id="@+id/progressBar"
-    style="?android:attr/progressBarStyleHorizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:visibility="gone"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
