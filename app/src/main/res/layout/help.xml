@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:text="Welcome to AI Assistant\nTry it out now"
+        android:text="Welcome to Lockit\nAI Assistant.\nTry it out now"
         android:textSize="28dp" />
 
     <RelativeLayout
@@ -37,8 +37,8 @@
             android:layout_toLeftOf="@id/send_btn"
             android:background="@drawable/rounded_corner"
             android:hint="Write here "
-            android:textColor="#00A5AF"
-            android:padding="16dp" />
+            android:padding="16dp"
+            android:textColor="#00A5AF" />
         <ImageButton
             android:layout_width="48dp"
             android:layout_height="48dp"
