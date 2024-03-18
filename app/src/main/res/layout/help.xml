@@ -12,15 +12,15 @@
         android:id="@+id/recycler_view"
         android:layout_above="@id/bottom_layout"
         />
+
     <TextView
+        android:id="@+id/welcome_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/welcome_text"
         android:layout_centerInParent="true"
-        android:text="Welcome to Easy ChatGPT\nTry it out now"
         android:gravity="center"
-        android:textSize="28dp"
-        />
+        android:text="Welcome to Lockit\nAI Assistant.\nTry it out now"
+        android:textSize="28dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,16 +28,17 @@
         android:layout_alignParentBottom="true"
         android:padding="8dp"
         android:id="@+id/bottom_layout">
+
         <EditText
+            android:id="@+id/message_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/message_edit_text"
             android:layout_centerInParent="true"
-            android:hint="Write here "
-            android:padding="16dp"
             android:layout_toLeftOf="@id/send_btn"
             android:background="@drawable/rounded_corner"
-            />
+            android:hint="Write here "
+            android:padding="16dp"
+            android:textColor="#00A5AF" />
         <ImageButton
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -54,6 +55,19 @@
 
     </RelativeLayout>
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_corner"
+        android:elevation="11dp"
+        android:text="Back"
+        android:textColor="#00A5AF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
 </RelativeLayout>

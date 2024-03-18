@@ -1,7 +1,9 @@
 package com.example.lockit_mobile_app
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
@@ -22,6 +24,7 @@ class Chat : AppCompatActivity() {
     private lateinit var sendButton: ImageButton
     private var messageList: MutableList<Message> = mutableListOf()
     private lateinit var messageAdapter: MessageAdapter
+    private lateinit var backButton: Button
     private val client = OkHttpClient()
     companion object {
         val JSON: MediaType = "application/json; charset=utf-8".toMediaType()
@@ -34,6 +37,14 @@ class Chat : AppCompatActivity() {
         welcomeTextView = findViewById(R.id.welcome_text)
         messageEditText = findViewById(R.id.message_edit_text)
         sendButton = findViewById(R.id.send_btn)
+        backButton = findViewById(R.id.back)
+
+        backButton.setOnClickListener{
+            val intent = Intent(applicationContext,DashBoard::class.java)
+            startActivity(intent)
+            finish()
+        }
+
 
         // Setup recycler view
         messageAdapter = MessageAdapter(messageList)
@@ -72,14 +83,14 @@ class Chat : AppCompatActivity() {
         val jsonBody = JSONObject().apply {
             put("model", "gpt-3.5-turbo-instruct")
             put("prompt", question)
-            put("max_tokens", 7)
+            put("max_tokens", 400)
             put("temperature", 0)
         }
         val body = RequestBody.create(JSON, jsonBody.toString())
         val request = Request.Builder()
             .url("https://api.openai.com/v1/completions")
             .header("Content-Type", "application/json")
-            .header("Authorization", "Bearer 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")
+            .header("Authorization", "Bearer RELPACE_OPEN_AI_WITH_API_KEY")
             .post(body)
             .build()
 
