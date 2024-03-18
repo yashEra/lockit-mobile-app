@@ -27,7 +27,7 @@
         android:id="@+id/right_chat_view"
         android:layout_alignParentEnd="true"
         android:background="@drawable/rounded_corner"
-        android:backgroundTint="#7CB342"
+        android:backgroundTint="#00A5AF"
         android:padding="8dp"
         android:layout_marginStart="80dp"
         >
