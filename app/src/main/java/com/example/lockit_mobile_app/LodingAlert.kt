@@ -11,7 +11,7 @@ class LoadingAlert(private val activity: Activity) {
         val builder = AlertDialog.Builder(activity)
         val inflater = LayoutInflater.from(activity)
         builder.setView(inflater.inflate(R.layout.loding_alert, null))
-        builder.setCancelable(true)
+        builder.setCancelable(false)
         dialog = builder.create()
         dialog?.show()
     }
