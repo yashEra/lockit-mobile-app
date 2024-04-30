@@ -90,7 +90,7 @@ class Chat : AppCompatActivity() {
         val request = Request.Builder()
             .url("https://api.openai.com/v1/completions")
             .header("Content-Type", "application/json")
-            .header("Authorization", "Bearer RELPACE_OPEN_AI_WITH_API_KEY")
+            .header("Authorization", "Bearer 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")//RELPACE_OPEN_AI_WITH_API_KEY
             .post(body)
             .build()
 
